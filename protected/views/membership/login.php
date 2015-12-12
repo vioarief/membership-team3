@@ -4,45 +4,36 @@
 	<div class="container" style="margin: 0 auto;">
 		<div class="dt-sc-clear"></div>                            
 		<div class="form-wrapper register" style="margin-top: -150px;">
+
+            <h3 class="aligncenter"> <span> <i class="fa fa-user"></i></span> Login Anggota</h3>
+            <?php
+                echo $this->insert('sections::flash-message');
+                ?>
+
 			<form action="<?php echo $this->uri_path_for('membership-login'); ?>" method="post" novalidate>
 
-				<?php
-				echo $this->insert('sections::flash-message');
-				?>
+				<div class="row">
+                    
+                    <div class="col-xs-10">
+                        <div class="form-group">
+                            <label for="email" class="control-label" style="font-weight: bold;">Username / Email</label>
+                            <input id="username" class="input_full" name="username" required="required" type="text" style="font-size: 15px;" />
+                        </div>
+                    </div>
 
-				<h3 class="aligncenter"> <span> <i class="fa fa-user"></i></span> Login Anggota</h3>
+                     <div class="col-xs-10">
+                        <div class="form-group">
+                            <label for="email" class="control-label" style="font-weight: bold;">Password</label>
+                            <input id="password" class="input_full" name="password" required="required" type="password" style="font-size: 15px;" />
+                        </div>
+                    </div>
 
-				<table style="width: 80%; margin: 0 auto;">
-                    <tbody>
-                        <tr>
-                            <th style="width: 200px;">
-                                <label style="font-weight: bold;">Username / Email</label>
-                            </th>
-                            <td>
-                                <input id="username" class="input_full" name="username" required="required" type="text" style="font-size: 15px;" />
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <th style="width: 200px;">
-                                <label style="font-weight: bold;">Password</label>
-                            </th>
-                            <td>
-                                <input id="password" class="input_full" name="password" required="required" type="password" style="font-size: 15px;" />
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <th>
-                                &nbsp;
-                            </th>
-                            <td>
-                                <input value="Login" class="button" type="submit" />
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-
+                    <div class="col-xs-10">
+                        <div class="form-group" style="text-align:right;">
+                            <input value="Login" class="button" type="submit" />
+                        </div>
+                    </div>
+                </div>
 			</form>
 		</div>
 	</div>
